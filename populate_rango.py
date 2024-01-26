@@ -37,7 +37,7 @@ def populate():
     
     other_pages = [
         {'title':'Bottle',
-        'url':'http://bottlepy.org/docs/dev',
+        'url':'http://bottlepy.org/docs/dev/',
         'views': 3},
         {'title':'Flask',
          'url':'http://flask.pocoo.org',
@@ -59,7 +59,7 @@ def populate():
     # The code below goes through the cats dictionary, then adds each category,
     # and then adds all the associated pages for that category.
     for cat, cat_data in cats.items():
-        c = add_cat(cat,cat_data['views'],cat_data['likes'])
+        c = add_cat(cat,cat_data['views'], cat_data['likes'])
         for p in cat_data['pages']:
             add_page(c, p['title'], p['url'], p['views'])
 
