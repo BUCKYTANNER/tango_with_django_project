@@ -2,7 +2,7 @@ from django import forms
 from rango.models import Page, Category
 
 class CategoryForm(forms.ModelForm):
-    name = forms.CharField(max_length= Category.name.max_length,
+    name = forms.CharField(
                            help_text="Please enter the category name.")
     views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
     likes = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
@@ -15,9 +15,9 @@ class CategoryForm(forms.ModelForm):
         fields = ('name',)
         
 class PageForm(forms.ModelForm):
-    title = forms.CharField(max_length=Page.title.max_length,
+    title = forms.CharField(
                             help_text="Please enter the title of the page.")
-    url = forms.URLField(max_length=Page.url.max_length,
+    url = forms.URLField(
                          help_text="Please enter the url of the page.")
     views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
     
