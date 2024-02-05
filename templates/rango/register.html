@@ -15,7 +15,7 @@ Rango says: <strong>register here!</strong><br />
 <form id='user_form' method="POST" action="{% url 'rango:register' %}" 
         enctype="multipart/form-data">
 
-        {csrf_token}
+        {% csrf_token %}
 
         <!-- Display each form -->
         {{ user_form.as_p }}
